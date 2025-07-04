@@ -1,1 +1,98 @@
-Placeholder content for GrabovoiCalendarSetup.exe
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Desktop Shortcut Installer</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      color: #111;
+      background: #fff;
+      line-height: 1.7;
+    }
+    header {
+      margin-bottom: 2rem;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 0.5rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: #111;
+      margin-right: 1rem;
+      font-weight: 600;
+      border-bottom: 1px dotted transparent;
+      transition: border-color 0.3s;
+    }
+    nav a:hover {
+      border-bottom-color: #111;
+    }
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+    h2 {
+      margin-top: 1.8rem;
+      font-weight: 700;
+    }
+    p {
+      margin-top: 0.5rem;
+    }
+    code {
+      background: #eee;
+      padding: 0.2rem 0.4rem;
+      border-radius: 3px;
+      font-family: monospace;
+      font-size: 0.95rem;
+    }
+    ul {
+      margin-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.3rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="rituals.html">Rituals</a>
+      <a href="printable.html">Printable Calendar</a>
+      <a href="affirmations.html">Affirmations</a>
+      <a href="sourcecode.html">Source Code</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Desktop Shortcut Installer</h1>
+    <p>This installer will help you create a desktop shortcut to quickly access the Grabovoi Ritual Calendar application.</p>
+
+    <h2>How to Install the Desktop Shortcut</h2>
+    <ol>
+      <li>Download the shortcut installer file from the link below.</li>
+      <li>Run the installer and follow the on-screen instructions.</li>
+      <li>The shortcut will be placed on your desktop for easy access.</li>
+      <li>Double-click the shortcut anytime to open the application.</li>
+    </ol>
+
+    <h2>Download Installer</h2>
+    <p><a href="installer.exe" download>Grabovoi Calendar Desktop Shortcut Installer</a></p>
+
+    <h2>Manual Shortcut Creation</h2>
+    <p>If you prefer, you can create the shortcut manually:</p>
+    <ul>
+      <li>Right-click on your desktop, select <code>New &gt; Shortcut</code>.</li>
+      <li>Enter the URL of the app: <code>https://fairefaretravels.github.io/10k/</code></li>
+      <li>Name the shortcut <strong>Grabovoi Calendar</strong>.</li>
+      <li>Click <code>Finish</code>.</li>
+    </ul>
+
+    <h2>Need Help?</h2>
+    <p>Contact us at <a href="mailto:support@fairefaretravels.com">support@fairefaretravels.com</a> if you encounter any issues.</p>
+  </main>
+</body>
+</html>
