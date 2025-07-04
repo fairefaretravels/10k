@@ -4,22 +4,67 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Daily Affirmation</title>
+  <style>
+    body {
+      background-color: #fff;
+      color: #000;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 40px;
+      max-width: 700px;
+      margin: auto;
+    }
+    h1, h3 {
+      text-align: center;
+    }
+    .affirmation {
+      font-style: italic;
+      margin: 30px 0;
+      text-align: center;
+      font-size: 1.2em;
+    }
+    .player {
+      display: flex;
+      justify-content: center;
+      margin: 30px 0;
+    }
+    .ritual-link {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .ritual-link a {
+      text-decoration: none;
+      color: #000;
+      border: 1px solid #000;
+      padding: 10px 20px;
+      display: inline-block;
+      transition: all 0.3s ease;
+    }
+    .ritual-link a:hover {
+      background-color: #000;
+      color: #fff;
+    }
+  </style>
 </head>
-<body style="font-family: sans-serif; padding: 20px; background: #fff; color: #000;">
-  <h1>Daily Affirmation</h1>
-  <p>I am centered. I am focused. My mind is clear. Today, I walk in purpose.</p>
+<body>
+  <h1>Today's Affirmation</h1>
 
-  <h3>Listen Now:</h3>
-  <audio controls>
-    <source src="https://samply.app/p/FihqEil2CJe3Wh7szUxV" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
+  <div class="affirmation">
+    “I am centered. I am focused. My mind is clear. Today, I walk in purpose.”
+  </div>
 
-  <!-- Optional: Download button -->
-  <p>
-    <a href="https://samply.app/p/FihqEil2CJe3Wh7szUxV" download>
-      Download Affirmation
-    </a>
-  </p>
+  <div class="player">
+    <iframe 
+      src="https://samply.app/embed/FihqEil2CJe3Wh7szUxV" 
+      width="100%" 
+      height="150" 
+      frameborder="0" 
+      allowtransparency="true" 
+      allow="autoplay">
+    </iframe>
+  </div>
+
+  <div class="ritual-link">
+    <a href="rituals.html">Go to Ritual of the Day</a>
+  </div>
 </body>
 </html>
