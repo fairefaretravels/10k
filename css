@@ -9,3 +9,18 @@ Documents
             │   └── affirmation1.mp3 (placeholder audio)
             ├── Ritual.txt
             └── Calendar.png (screenshot of Grabovoi Calendar)
+
+.audio-player {
+  background: #fff;
+  color: #000;
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 1rem 0;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.audio-player h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
