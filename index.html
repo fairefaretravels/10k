@@ -1,93 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Rotating Quotes + Affirmation Player</title>
-  <style>
-    body {
-      margin: 0;
-      background-color: #000;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: white;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    #quote-container {
-      background: rgba(0, 0, 0, 0.7);
-      padding: 20px 40px;
-      border-radius: 10px;
-      max-width: 600px;
-      text-align: center;
-      position: relative;
-      margin-bottom: 40px;
-    }
-    #quote {
-      font-size: 1.5rem;
-      opacity: 1;
-      transition: opacity 1s ease-in-out;
-    }
-    .audio-player {
-      background: #111;
-      padding: 20px;
-      border-radius: 10px;
-      max-width: 500px;
-      text-align: center;
-      box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
-      color: #ff4444;
-    }
-    .audio-player h2 {
-      margin-bottom: 10px;
-      color: #ff4444;
-    }
-    audio {
-      width: 100%;
-      outline: none;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Rotating Quotes</title>
+<style>
+  /* Full black background */
+  body {
+    margin: 0;
+    background-color: #000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Container with semi-transparent dark background */
+  #quote-container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px 40px;
+    border-radius: 10px;
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+  }
+
+  /* Quote text */
+  #quote {
+    font-size: 1.5rem;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+  }
+</style>
 </head>
 <body>
 
-  <div id="quote-container">
-    <div id="quote">You can’t fall off the floor.</div>
-  </div>
+<div id="quote-container">
+  <div id="quote">You can’t fall off the floor.</div>
+</div>
 
-  <div class="audio-player">
-    <h2>🎧 Daily Affirmation</h2>
-    <audio controls>
-      <source src="https://samply.app/p/FihqEil2CJe3Wh7szUxV" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
-  </div>
+<script>
+  const quotes = [
+    "You can’t fall off the floor.",
+    "Wealth flows to me with ease and grace.",
+    "I am grounded, focused, and full of magic.",
+    "Every closed door is redirection to something better.",
+    "Abundance is my birthright."
+  ];
 
-  <script>
-    const quotes = [
-      "You can’t fall off the floor.",
-      "Wealth flows to me with ease and grace.",
-      "I am grounded, focused, and full of magic.",
-      "Every closed door is redirection to something better.",
-      "Abundance is my birthright."
-    ];
+  let index = 0;
+  const quoteElem = document.getElementById('quote');
+  const fadeDuration = 1000; // milliseconds
+  const displayDuration = 9000; // time each quote is visible before fade out
 
-    let index = 0;
-    const quoteElem = document.getElementById('quote');
-    const fadeDuration = 1000; // 1 second fade
-    const displayDuration = 9000; // show each quote for 9 seconds
+  function showNextQuote() {
+    // Fade out
+    quoteElem.style.opacity = 0;
 
-    function showNextQuote() {
-      quoteElem.style.opacity = 0;
-      setTimeout(() => {
-        index = (index + 1) % quotes.length;
-        quoteElem.textContent = quotes[index];
-        quoteElem.style.opacity = 1;
-      }, fadeDuration);
-    }
+    setTimeout(() => {
+      // Change quote text
+      index = (index + 1) % quotes.length;
+      quoteElem.textContent = quotes[index];
+      // Fade in
+      quoteElem.style.opacity = 1;
+    }, fadeDuration);
+  }
 
-    setInterval(showNextQuote, displayDuration + fadeDuration);
-  </script>
+  // Start rotation loop
+  setInterval(showNextQuote, displayDuration + fadeDuration);
+
+</script>
 
 </body>
 </html>
