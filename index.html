@@ -1,9 +1,9 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Rotating Quotes</title>  
+  <title>Rotating Quotes + Affirmation Player</title>
   <style>
     body {
       margin: 0;
@@ -16,7 +16,6 @@
       justify-content: center;
       align-items: center;
     }
-
     #quote-container {
       background: rgba(0, 0, 0, 0.7);
       padding: 20px 40px;
@@ -26,13 +25,11 @@
       position: relative;
       margin-bottom: 40px;
     }
-
     #quote {
       font-size: 1.5rem;
       opacity: 1;
       transition: opacity 1s ease-in-out;
     }
-
     .audio-player {
       background: #111;
       padding: 20px;
@@ -40,15 +37,15 @@
       max-width: 500px;
       text-align: center;
       box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+      color: #ff4444;
     }
-
     .audio-player h2 {
       margin-bottom: 10px;
       color: #ff4444;
     }
-
     audio {
       width: 100%;
+      outline: none;
     }
   </style>
 </head>
@@ -77,12 +74,11 @@
 
     let index = 0;
     const quoteElem = document.getElementById('quote');
-    const fadeDuration = 1000;
-    const displayDuration = 9000;
+    const fadeDuration = 1000; // 1 second fade
+    const displayDuration = 9000; // show each quote for 9 seconds
 
     function showNextQuote() {
       quoteElem.style.opacity = 0;
-
       setTimeout(() => {
         index = (index + 1) % quotes.length;
         quoteElem.textContent = quotes[index];
